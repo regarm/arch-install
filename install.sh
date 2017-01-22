@@ -36,7 +36,9 @@ while [[ true ]]; do
 done
 
 echo "Formating root partition"
+set +e
 umount $root
+set -e
 mkfs.ext4 $root
 
 echo "Mounting root partition on /mnt"
