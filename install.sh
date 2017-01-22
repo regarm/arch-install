@@ -14,10 +14,10 @@ read -p 'Enter your user name, (must): ' user
 
 echo "Following will be setup of your system after installation :"
 echo "Root partition: $root"
-if [ -z "$swap" ]; then
+if [ ! -z "$swap" ]; then
 	echo "Swap partition: $swap"
 fi
-if [ -z "$repo" ]; then
+if [ ! -z "$repo" ]; then
 echo "Local Repo: $repo"
 fi
 echo "Hostname: $host"
@@ -35,17 +35,17 @@ while [[ true ]]; do
 	echo "Please answer in y/n."
 done
 
-echo "Formating root partition"
-umount $root
-mkfs.ext4 $root
+# echo "Formating root partition"
+# umount $root
+# mkfs.ext4 $root
 
-echo "Mounting root partition on /mnt"
-mount $root /mnt
+# echo "Mounting root partition on /mnt"
+# mount $root /mnt
 
-if [ -z "$swap" ]; then
-	echo "Making swap on $swap"
-	mkswap $swap
-	swapon $swap
-fi
+# if [ ! -z "$swap" ]; then
+# 	echo "Making swap on $swap"
+# 	mkswap $swap
+# 	swapon $swap
+# fi
 
-echo "Done\n"
+# echo "Done\n"
