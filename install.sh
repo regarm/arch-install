@@ -9,10 +9,8 @@ echo 'This assumes that you have done partition and are connected to internet.'
 read -p 'Enter your root partition, (must): ' root
 read -p 'Enter your swap partition, (if any): ' swap
 read -p 'Enter your local mirror, (if any): ' mirror
-read -p 'Enter your host name, (must): ' host
-read -p 'Enter your user name, (must): ' user
 
-echo "Following will be setup of your system after installation :"
+echo "Following information is provided by you: "
 echo "Root partition: $root"
 if [ ! -z "$swap" ]; then
 	echo "Swap partition: $swap"
@@ -20,8 +18,6 @@ fi
 if [ ! -z "$mirror" ]; then
 echo "Local Repo: $mirror"
 fi
-echo "Hostname: $host"
-echo "Username: $user"
 
 while [[ true ]]; do
 	read -p "Are you sure to continue? : y/n" CONDITION;
