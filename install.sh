@@ -59,4 +59,12 @@ if [ ! -z "$mirror" ]; then
 	cat /etc/pacman.d/mirrorlist.insnew > /etc/pacman.d/mirrorlist
 fi
 
+#Installing Base System
+echo 'Installing Base System'
+pacstrap -i /mnt base base-devel
+
+#Generating fstab
+echo 'Generating fstab'
+genfstab -U -p /mnt >> /mnt/etc/fstab
+
 echo "Done\n"
