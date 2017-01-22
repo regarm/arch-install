@@ -75,9 +75,9 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 
 echo 'Copying inside job'
-cp ./insidejob /mnt/home/root/
+cp ./insidejob.sh /mnt/usr/bin
 
 #doing arch-chroot
-arch-chroot /mnt ./insidejob.sh
+arch-chroot /mnt insidejob.sh
 
 echo "Successfull\n"
