@@ -59,6 +59,9 @@ if [ ! -z "$mirror" ]; then
 	cat /etc/pacman.d/mirrorlist.insnew > /etc/pacman.d/mirrorlist
 fi
 
+#Fetching Arch linux PGP keyring
+pacman -S archlinux-keyring
+
 #Installing Base System
 echo 'Installing Base System'
 pacstrap -i /mnt base base-devel
