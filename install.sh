@@ -8,7 +8,7 @@ echo 'This assumes that you have done partition and are connected to internet.'
 
 read -p 'Enter your root partition, (must): ' root
 read -p 'Enter your swap partition, (if any): ' swap
-read -p 'Enter your local repository, (if any): ' repo
+read -p 'Enter your local mirror, (if any): ' mirror
 read -p 'Enter your host name, (must): ' host
 read -p 'Enter your user name, (must): ' user
 
@@ -17,8 +17,8 @@ echo "Root partition: $root"
 if [ ! -z "$swap" ]; then
 	echo "Swap partition: $swap"
 fi
-if [ ! -z "$repo" ]; then
-echo "Local Repo: $repo"
+if [ ! -z "$mirror" ]; then
+echo "Local Repo: $mirror"
 fi
 echo "Hostname: $host"
 echo "Username: $user"
@@ -45,9 +45,18 @@ echo "Mounting root partition on /mnt"
 mount $root /mnt
 
 if [ ! -z "$swap" ]; then
+	set +e
 	echo "Making swap on $swap"
 	mkswap $swap
 	swapon $swap
+	set -e
+fi
+
+if [ !-z "$mirror" ]; then
+	echo "Adding $mirror to mirrorlist"
+	echo "Server = $mirror" > /etc/pacman.d/mirrorlist.insnew
+	cat /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist.insnew
+	cat /etc/pacman.d/mirrorlist.insnew > /etc/pacman.d/mirrorlist
 fi
 
 echo "Done\n"
