@@ -35,6 +35,9 @@ while [[ true ]]; do
 	echo "Please answer in y/n."
 done
 
+echo "Update system clock"
+timedatectl set-ntp true
+
 echo "Formating root partition"
 set +e
 umount $root
@@ -70,4 +73,11 @@ pacstrap -i /mnt base base-devel
 echo 'Generating fstab'
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
-echo "Done\n"
+
+echo 'Copying inside job'
+cp ./insidejob /mnt/home/root/
+
+#doing arch-chroot
+arch-chroot /mnt ./insidejob.sh
+
+echo "Successfull\n"
