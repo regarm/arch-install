@@ -25,8 +25,8 @@ passwd
 
 echo 'Setting host name'
 echo $host > /etc/hostname
-echo "127.0.0.1 localhost.localdomain $host" > /etc/hosts
-echo "::1 localhost.localdomain $host" > /etc/hosts
+echo "127.0.0.1 localhost.localdomain $host" >> /etc/hosts
+echo "::1 localhost.localdomain $host" >> /etc/hosts
 
 echo "Setting Initial RamDisk Environment"
 mkinitcpio -p linux
