@@ -52,7 +52,7 @@ if [ ! -z "$swap" ]; then
 	set -e
 fi
 
-if [ !-z "$mirror" ]; then
+if [ ! -z "$mirror" ]; then
 	echo "Adding following mirror to mirrorlist : $mirror"
 	echo "Server = $mirror" > /etc/pacman.d/mirrorlist.insnew
 	cat /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist.insnew
