@@ -1,7 +1,18 @@
 # x-org server
-xorg-server xorg-server-utils xorg-xinit xorg-utils xterm xorg-twm xorg-xclock 
-mesa mesa-demos xf86-input-keyboard xf86-input-mouse xf86-input-synaptics xf86-input-evdev 
+xorg-server xorg-server-utils
+xorg-xinit 
+xorg-utils
+xterm
+xorg-twm
+xorg-xclock 
+mesa mesa-demos
+xf86-input-keyboard 
+xf86-input-mouse
+xf86-input-synaptics
+xf86-input-evdev 
+xf86-input-libinput
 xf86-video-ati
+xf86-video-vesa
 
 # Display Manager
 gnome gnome-extra gdm lightdm
@@ -50,7 +61,7 @@ jre8-openjdk jdk8-openjdk
 libreoffice-fresh wps-office
 
 # Virtualbox
-virtualbox virtualbox-host-dkms
+virtualbox virtualbox-host-dkms virtualbox-guest-utils
 
 # xfce4
 xfce4 xfce4-goodies

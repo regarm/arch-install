@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo 'vboxguest' >> /etc/modules-load.d/virtualbox.conf
+echo 'vboxsf' >> /etc/modules-load.d/virtualbox.conf
+echo 'vboxvideo' >> /etc/modules-load.d/virtualbox.conf
