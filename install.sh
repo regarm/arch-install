@@ -2,16 +2,10 @@
 
 echo "Arch Install Script"
 
-#Warning
-cat lib/disclaimer.md
-echo 'Press any key to continue or ctrl+c to exit'
-read
 
-
-
-read -p 'Enter your root partition, (must): '  ais_ROOT
-read -p 'Enter your swap partition, (if any): ' ais_SWAP
-read -p 'Enter your local mirror, (if any): ' ais_mirror
+read -p 'Enter your root partition, (must): '  $root
+read -p 'Enter your swap partition, (if any): ' $swap
+read -p 'Enter your local mirror, (if any): ' $mirror
 
 echo "Following information is provided by you: "
 echo "Root partition: $root"

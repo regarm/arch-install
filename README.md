@@ -4,7 +4,7 @@ Arch install scripts.
 ###### Usage
 ```git clone http://github.com/regarmanojkumar/arch-install```  
 or  
-```wget https://github.com/regarmanojkumar/arch-install/archive/master.zip```
+```wget https://github.com/regarmanojkumar/arch-install/archive/master.tar.gz```
 
 ###### Partition Guide (Only usage description)
 ```parted /dev/sdx print```  
