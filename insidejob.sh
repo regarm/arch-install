@@ -33,7 +33,7 @@ mkinitcpio -p linux
 
 #Install BootLoader
 echo "Install BootLoader"
-pacman -S grub os-prober
+pacman --noconfirm -S grub os-prober
 grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -43,7 +43,7 @@ passwd $user
 
 echo "Setting allowance for use of sudo"
 echo '#Manual Entry' >> /etc/sudoers
-echo '%$user ALL=(ALL) ALL' >> /etc/sudoers
+echo "%$user ALL=(ALL) ALL" >> /etc/sudoers
 
 echo 'Exiting arch-chroot '
 exit
