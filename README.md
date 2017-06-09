@@ -1,6 +1,9 @@
 # arch-install
 Arch install scripts.
 
+> Only tested for mbr, BIOS, x86_64, archlinux-2015.09.01-dual.iso  
+> Timezone - IST, Lang - en_US.UTF-8 (Though can be edited in script manually in script.)
+
 ###### Usage
 ```git clone http://github.com/regarmanojkumar/arch-install```  
 or  

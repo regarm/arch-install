@@ -14,6 +14,9 @@ xf86-input-libinput
 xf86-video-ati
 xf86-video-vesa
 
+# xfce4
+xfce4 xfce4-goodies
+
 # Display Manager
 gnome gnome-extra gdm lightdm
 
@@ -24,7 +27,7 @@ acpid acpi cpupower hdparm
 alsa-utils alsa-oss  alsa-plugins pulseaudio v4l2ucp pulseaudio-alsa pavucontrol
 
 # Codecs
-a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins
+a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore #gstreamer0.10-plugins
 
 # Video Player
 vlc
@@ -63,8 +66,6 @@ libreoffice-fresh wps-office
 # Virtualbox
 virtualbox virtualbox-host-dkms virtualbox-guest-utils
 
-# xfce4
-xfce4 xfce4-goodies
 
 # Compression Tools
 unrar unzip
