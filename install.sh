@@ -3,12 +3,13 @@
 echo "Arch Install Script"
 
 
-read -p 'Enter your root partition, (must): '  $root
-read -p 'Enter your swap partition, (if any): ' $swap
-read -p 'Enter your local mirror, (if any): ' $mirror
+read -p 'Enter your root partition, (must): '  root
+read -p 'Enter your swap partition, (if any): ' swap
+read -p 'Enter your local mirror, (if any): ' mirror
 
 echo "Following information is provided by you: "
 echo "Root partition: $root"
+exit;
 if [ ! -z "$swap" ]; then
 	echo "Swap partition: $swap"
 fi
