@@ -27,5 +27,8 @@ or
 ```curl "https://172.16.1.1:8090/login.xml" -d "username=BE103322013&password=sample&producttype=1&mode=191" -ks```
 
 ###### run
-```cd arch-install```
+```cd arch-install```  
 ```install.sh```
+
+##### To install packages specified in ```packages``` file  
+./packages.install
