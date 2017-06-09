@@ -62,7 +62,7 @@ if [ ! -z "$mirror" ]; then
 fi
 
 #Fetching Arch linux PGP keyring
-pacman -S archlinux-keyring
+pacman -S --no-confirm archlinux-keyring
 
 #Installing Base System
 echo 'Installing Base System'

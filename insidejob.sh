@@ -33,7 +33,7 @@ mkinitcpio -p linux
 
 #Install BootLoader
 echo "Install BootLoader"
-pacman -S grub os-prober
+pacman --no-confirm -S grub os-prober
 grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 

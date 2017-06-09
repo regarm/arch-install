@@ -1,0 +1,7 @@
+put => GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi='!Windows 2012'"
+	
+instead of => GRUB_CMDLINE_LINUX_DEFAULT="quiet" 
+
+in /etc/default/grub
+
+run => grub-mkconfig -o /boot/grub/grub.cfg again

@@ -1,0 +1,1 @@
+sudo pacman --no-confirm --needed -S `sed 's/.*#.*//' packages`

@@ -1,0 +1,66 @@
+# x-org server
+xorg-server xorg-server-utils xorg-xinit xorg-utils xterm xorg-twm xorg-xclock 
+mesa mesa-demos xf86-input-keyboard xf86-input-mouse xf86-input-synaptics xf86-input-evdev 
+xf86-video-ati
+
+# Display Manager
+gnome gnome-extra gdm lightdm
+
+# Laptop Tools
+acpid acpi cpupower hdparm
+
+# Sound System
+alsa-utils alsa-oss  alsa-plugins pulseaudio v4l2ucp pulseaudio-alsa pavucontrol
+
+# Codecs
+a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins
+
+# Video Player
+vlc
+
+# Web utils
+firefox flashplugin chromium ifplugd
+networkmanager network-manager-applet
+modem-manager-gui modemmanager gnome-keyring
+xfce4-notifyd wireless_tools
+net-tools
+
+# Command Line
+bash-completion
+
+# IDE
+codeblocks sublime-text-dev
+
+# Camera
+cheese
+
+# File System
+thunar gvfs ntfsprogs gparted dosfstools
+
+# Readers
+evince vim
+
+# Photo Viewers
+shotwell ristretto
+
+# Java JRE and JDK
+jre8-openjdk jdk8-openjdk
+
+# Office
+libreoffice-fresh wps-office
+
+# Virtualbox
+virtualbox virtualbox-host-dkms virtualbox-host-modules
+
+# xfce4
+xfce4 xfce4-goodies
+
+# Compression Tools
+unrar unzip
+
+#fonts
+adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts adobe-source-code-pro-fonts
+ttf-dejavu ttf-droid ttf-inconsolata terminus-font
+
+# others
+winusb usb_modeswitch usbutils slock xlock numix-themes mate-terminal modem-manager-gui modemmanager mousetweaks

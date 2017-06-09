@@ -6,6 +6,14 @@ Arch install scripts.
 or  
 ```wget https://github.com/regarmanojkumar/arch-install/archive/master.zip```
 
+###### Partition Guide (Only usage description)
+```parted /dev/sdx print```  
+```parted /dev/sdx mklabel msdos```  
+```parted /dev/sdx mkpart primary ext4 1MB 150GB```  
+```parted /dev/sdx set y boot on```  
+```parted /dev/sdx mkpart primary linux-swap 150GB 158GB```  
+```parted /dev/sdx mkpart primary ext4 158GB 100%'```  
+
 ###### dhcp connection
 ```systemctl start dhcpcd```
 
