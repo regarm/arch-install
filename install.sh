@@ -1,14 +1,17 @@
 #!/bin/bash
-set -e
-# Any subsequent(*) commands which fail will cause the shell script to exit immediately
-# The shell does not exit if the command that fails is part of the command list immediately following a while or until keyword, part of the test in an if statement, part of a && or || list, or if the command's return value is being inverted via !
 
-echo 'This is a script to automate ARCH LINUX installation process.'
-echo 'This assumes that you have done partition and are connected to internet.'
+echo "Arch Install Script"
 
-read -p 'Enter your root partition, (must): ' root
-read -p 'Enter your swap partition, (if any): ' swap
-read -p 'Enter your local mirror, (if any): ' mirror
+#Warning
+cat lib/disclaimer.md
+echo 'Press any key to continue or ctrl+c to exit'
+read
+
+
+
+read -p 'Enter your root partition, (must): '  ais_ROOT
+read -p 'Enter your swap partition, (if any): ' ais_SWAP
+read -p 'Enter your local mirror, (if any): ' ais_mirror
 
 echo "Following information is provided by you: "
 echo "Root partition: $root"
@@ -20,7 +23,7 @@ echo "Local Repo: $mirror"
 fi
 
 while [[ true ]]; do
-	read -p "Are you sure to continue? : y/n" CONDITION;
+	read -p "Are you sure to continue? [y/n]" CONDITION;
 	if [ "$CONDITION" == "y" ]; then
 	   break
 	fi
@@ -28,7 +31,7 @@ while [[ true ]]; do
 		echo 'Exiting the script.'
 		exit 1;
 	fi
-	echo "Please answer in y/n."
+	echo "Please answer in [y/n]."
 done
 
 echo "Update system clock"
@@ -76,4 +79,4 @@ cp ./insidejob.sh /mnt/usr/bin
 #doing arch-chroot
 arch-chroot /mnt insidejob.sh
 
-echo "Successfull\n"
+echo "Successfull"
