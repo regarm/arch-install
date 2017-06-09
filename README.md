@@ -31,4 +31,4 @@ or
 ```install.sh```
 
 ##### To install packages specified in ```packages``` file  
-./packages.install
+```./packages.install```
