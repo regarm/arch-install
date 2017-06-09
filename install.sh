@@ -9,7 +9,7 @@ read -p 'Enter your local mirror, (if any): ' mirror
 
 echo "Following information is provided by you: "
 echo "Root partition: $root"
-exit;
+
 if [ ! -z "$swap" ]; then
 	echo "Swap partition: $swap"
 fi
@@ -57,7 +57,7 @@ if [ ! -z "$mirror" ]; then
 fi
 
 #Fetching Arch linux PGP keyring
-pacman -S --no-confirm archlinux-keyring
+pacman -S --noconfirm archlinux-keyring
 
 #Installing Base System
 echo 'Installing Base System'
