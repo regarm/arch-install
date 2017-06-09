@@ -43,7 +43,7 @@ passwd $user
 
 echo "Setting allowance for use of sudo"
 echo '#Manual Entry' >> /etc/sudoers
-echo '%$user ALL=(ALL) ALL' >> /etc/sudoers
+echo "%$user ALL=(ALL) ALL" >> /etc/sudoers
 
 echo 'Exiting arch-chroot '
 exit
