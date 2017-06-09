@@ -50,7 +50,7 @@ jre8-openjdk jdk8-openjdk
 libreoffice-fresh wps-office
 
 # Virtualbox
-virtualbox virtualbox-host-dkms virtualbox-host-modules
+virtualbox virtualbox-host-dkms
 
 # xfce4
 xfce4 xfce4-goodies
@@ -63,4 +63,4 @@ adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts adobe-source-code-pro-f
 ttf-dejavu ttf-droid ttf-inconsolata terminus-font
 
 # others
-winusb usb_modeswitch usbutils slock xlock numix-themes mate-terminal modem-manager-gui modemmanager mousetweaks
+winusb usb_modeswitch usbutils numix-themes mate-terminal modem-manager-gui modemmanager mousetweaks
